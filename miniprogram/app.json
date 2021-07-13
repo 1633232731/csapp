@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/searchResultList/searchResultList",
+    
+    "pages/mine/mine",
+    "pages/upload/upload",
+    "pages/detail/detail",
+    "pages/problemList/problemList"
+    
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "课程分享论坛",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#BFBFBF",
+    "selectedColor": "#1AFA29",
+    "backgroundColor": "#FAFAFA",
+    "list": [
+      {
+        "selectedIconPath": "icon/indexSelected.png",
+        "iconPath": "icon/index.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "icon/uploadSelected.png",
+        "iconPath": "icon/upload.png",
+        "pagePath": "pages/upload/upload",
+        "text": "发布"
+      },
+      {
+        "selectedIconPath": "icon/mineSelected.png",
+        "iconPath": "icon/mine.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

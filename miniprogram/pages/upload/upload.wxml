@@ -1,0 +1,60 @@
+<!--miniprogram/pages/upload/upload.wxml-->
+
+<view class="top_subheading">Title:</view>
+<view style="height:80rpx" class="text_background">
+  <input style="height:40rpx" class="text_input" confirm-type="done" maxlength="15" type="text"
+    bindinput="bindInputTitle" placeholder="一个清爽的标题是成功的一半" value="{{title}}"></input>
+</view>
+
+<view class="middle">
+  <view class="middle-left">
+    <view class="middle_subheading">Classification:</view>
+    <picker bindchange="bindPickerChange" value="{{classification}}" range="{{array}}" class="picker">
+      <view class="picker_choose">
+        {{classification}}
+      </view>
+    </picker>
+  </view>
+  <view class="middle-right">
+    <view class="show-myself">
+      <view class="show-myself-hint">仅自己可见</view>
+      <switch class="show-myself-switch" bindchange="switchChange" checked="{{showMyselfOnly}}"/>
+    </view>
+  </view>
+</view>
+
+<view class="middle_subheading">SelectedImage:(Longpress to Delete) o(*≧▽≦)ツ</view>
+
+<view style="height : {{pictureShowHeight}}rpx" class="picture_background">
+  <view class="picture_blank"></view>
+  <view wx:for="{{pictureFilePaths}}" class="picture_layout">
+    <image bindtap="picturePreview" bindlongpress="pictureDatele" data-index="{{index}}"
+      data-list="{{pictureFilePaths}}" data-src="{{item}}" class="picture" src="{{item}}" mode="aspectFill"></image>
+    <!-- button plain="true"><image  class = "picture_delete_icon" src="icon/delete.png"></image></button -->
+  </view>
+</view>
+
+<button bindtap="getPicture" style="width:725rpx" class="choose_button" hover-class="choose_button_hover">
+  <image class="choose_button_icon" src="icon/picture.png"></image>
+  <view class="choose_button_text">
+    <view class="choose_button_title">选择图片</view>
+    <view class="choose_button_disc">拍照/相册</view>
+  </view>
+</button>
+
+<view class="middle_subheading">Description:</view>
+<view style="height : 335rpx" class="text_background">
+  <textarea style="height : 320rpx" class="text_input" type="text" confirm-type="done" bindinput="bindInputDescription"
+    placeholder="描述一下问题吧~~~（140字以内）" value="{{description}}"></textarea>
+</view>
+
+
+
+<button bindtap="checkPictureUpdateCloud" style="width:725rpx" class="publish_button"
+  hover-class="publish_button_hover">
+  <image class="publish_button_icon" src="icon/upload.png"></image>
+  <view class="publish_button_text">
+    <view class="publish_button_title">上传发布</view>
+  </view>
+</button>
+<!--button sytle = "margin-top:50rpx" bindtap="pictureUpdateCloud">upload</button-->

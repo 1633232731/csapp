@@ -1,0 +1,66 @@
+<!--miniprogram/pages/searchResultList/searchResultList.wxml-->
+<view class="top">
+  <view class="title">
+    <view class="title-text-1">Hello world! </view>
+    <view class="title-text-2">Technology makes life easier.</view>
+  </view>
+  <view class="search">
+    <image src="icon/search.png" class="search-image"></image>
+    <input class="search-input" placeholder="Search In Database" bindinput="getSearchText" value="{{searchText}}"
+      maxlength="10">
+    </input>
+    <view class="search-button" bindtap="getSearchResultButton">搜索</view>
+    <!-- <view class="search-button" bindtap="getSearchProblem">搜索</view> -->
+  </view>
+</view>
+
+<radio-group bindchange="radioChange" class="radio-area">
+  <label wx:for="{{items}}" wx:key="{{item.value}}">
+    <view class="radio">
+      <view class="radio-radio">
+        <radio value="{{item.value}}" checked="{{item.checked}}" />
+      </view>
+      <view class="radio-hint">{{item.name}}</view>
+    </view>
+  </label>
+</radio-group>
+
+<block wx:if="{{data.length !== 0 || isloaded === true}}">
+  <block wx:for="{{data}}">
+    <view class="data-block" bindtap="navigateToDetail" data-problemno="{{item.problemID}}">
+      <view class="data-top">
+        <block wx:if="{{index==0 || index==1 || index==2}}">
+          <view wx:if="{{index==0}}" class="data-top-number-area" style="background-color:RGB(254,75,89)">
+            <text class="data-top-number">{{index+1}}</text>
+          </view>
+          <view wx:if="{{index==1}}" class="data-top-number-area" style="background-color:RGB(255,177,75)">
+            <text class="data-top-number">{{index+1}}</text>
+          </view>
+          <view wx:if="{{index==2}}" class="data-top-number-area" style="background-color:RGB(72,144,254)">
+            <text class="data-top-number">{{index+1}}</text>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="data-top-number-area">
+            <text class="data-top-number">{{index+1}}</text>
+          </view>
+        </block>
+
+        <view class="data-top-title">{{item.title}}</view>
+      </view>
+
+      <view class="data-middle">
+        <view class="data-middle-text">{{item.description}}</view>
+      </view>
+
+      <view class="data-bottom">
+        <view class="data-bottm-author">{{item.authorNickname}}</view>
+        <view class="data-bottom-like">{{item.like}} 赞同</view>
+      </view>
+
+    </view>
+  </block>
+</block>
+<block wx:else>
+  <view class="load-data">数据加载中......</view>
+</block>

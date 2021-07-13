@@ -1,0 +1,81 @@
+<!--miniprogram/pages/index/detail/detail.wxml-->
+
+
+<view class="title">
+  <view class="title-text">{{problemDetail.title}}</view>
+</view>
+
+<view class="top-info">
+  <view class="top-info-left">
+    <view class="info">
+      <view class="info-avatar"
+        style="background-color:RGB({{problemDetail.RGBAvatar[0]}},{{problemDetail.RGBAvatar[1]}},{{problemDetail.RGBAvatar[2]}})">
+      </view>
+      <view class="info-detail">
+        <view class="info-username"
+          style="color:RGB({{problemDetail.RGBAvatar[0]}},{{problemDetail.RGBAvatar[1]}},{{problemDetail.RGBAvatar[2]}})">
+          {{problemDetail.authorNickname}}</view>
+        <view class="info-time">{{problemDetail.date}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="top-info-middle">
+    <view wx:if="{{collect==false}}" class="not-collect" bindtap="collectProblem">收藏</view>
+    <view wx:else class="collected" bindtap="cancelCollectProblem">取消收藏</view>
+  </view>
+  <view class="top-info-right" hidden="{{!displaySwitch}}">
+    <view class="switch-show-self-only">
+      <view class="switch-hint">仅自己可见</view>
+      <switch bindchange="switchChange" checked="{{showMyselfOnly}}"></switch>
+    </view>
+  </view>
+</view>
+
+<view class="content">
+  <view class="context-text">
+    {{problemDetail.description}}
+  </view>
+  <view class="content-image">
+    <block wx:for="{{problemDetail.fileId}}">
+      <image src="{{item}}" mode="widthFix" class="content-image-detail" data-src="{{item}}" class="picture"
+        src="{{item}}" bindtap="previewImage"></image>
+    </block>
+  </view>
+</view>
+<view class="problemID">
+  <view class="problemID-hint">Problem ID:</view>
+  <view class="problemID-number">{{problemDetail.problemID}}</view>
+</view>
+<view class="line"></view>
+
+<view class="comment-area">
+  <block wx:for="{{commentList}}">
+    <view class="comment">
+      <view class="comment-detail">
+        <view class="comment-userNickname"
+          style="color:RGB({{item.commentRGBAvatar[0]}},{{item.commentRGBAvatar[1]}},{{item.commentRGBAvatar[2]}})">
+          {{item.commentNickname}}</view>
+        <view class="comment-content">{{item.commentContent}}</view>
+        <view class="comment-time">{{item.time}}</view>
+      </view>
+      <view class="comment-like">
+        <image wx:if="{{!item.isLike}}" src="images/like.png" class="comment-image" bindtap="commentLike"
+          data-index="{{index}}"></image>
+        <image wx:else src="images/like-selected.png" class="comment-image"></image>
+        <view class="comment-like-number">{{item.like}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="bottom-fix">
+  <input class="bottom-input" placeholder="评论一下" bindinput="getMyComment" value="{{myComment}}">
+  </input>
+  <view class="bottom-submit" bindtap="checkComment">发送</view>
+  <view wx:if="{{isLike}}" class="bottom-like">
+    <image src="images/like-selected.png" class="like-image"></image>
+  </view>
+  <view wx:else class="bottom-like" bindtap="tapLike">
+    <image src="images/like.png" class="like-image"></image>
+  </view>
+</view>

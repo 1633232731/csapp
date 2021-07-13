@@ -1,0 +1,231 @@
+/* miniprogram/pages/index/detail/detail.wxss */
+
+page {
+  background: white;
+  width: 95%;
+  margin: 0 2.5% 0 2.5%;
+}
+
+.title{
+  margin: 40rpx 25rpx 0 20rpx;
+}
+
+.title-text{
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.problemID{
+  font-weight: 400;
+  font-size: small;
+  color: grey;
+  margin-bottom: 20rpx;
+  margin-top: 30rpx;
+}
+
+.problemID-hint{
+  display: inline-block;
+}
+.problemID-number{
+  display: inline-block;
+  margin-left: 20rpx;
+}
+
+
+.top-info{
+  margin: 50rpx 0 0 0;
+
+}
+
+.info-avatar{
+  display: inline-block;
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 40rpx;
+}
+
+.info-detail{
+  display: inline-block;
+  margin: 0 0 0 30rpx;
+  position: relative;
+  top: -10rpx;
+}
+
+.info-username{
+  font-weight: 600;
+}
+
+.info-time{
+  font-size: small;
+}
+
+
+.not-collect{
+  width: 75%;
+  height: 50rpx;
+  background-color: white;
+  color: RGB(255,77,77);
+  border-radius: 25rpx;
+  border: 1rpx solid black;
+  position: relative;
+  bottom: 30rpx;
+  left: 50rpx;
+  font-weight: 400;
+}
+
+.collected{
+  width: 75%;
+  height: 50rpx;
+  background-color: RGB(255,77,77);
+  color: white;
+  border-radius: 25rpx;
+  border: 1rpx solid black;
+  position: relative;
+  bottom: 30rpx;
+  left: 50rpx;
+  font-weight: 400;
+}
+
+.switch-show-self-only{
+  position: relative;
+  bottom: 10rpx;
+  left: 40%;
+}
+.switch-hint{
+  font-weight: 400;
+  font-size: small;
+  color: grey;
+  margin-bottom: 20rpx;
+}
+
+
+.top-info-left{
+  display: inline-block;
+  width: 40%;
+}
+
+.top-info-middle{
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+.top-info-right{
+  display: inline-block;
+  width: 30%;
+}
+
+.content{
+  margin: 50rpx 0 0 0;
+  line-height:200%
+}
+
+.context-text{
+
+}
+
+.content-image{
+  margin-top: 40rpx;
+}
+
+.content-image-detail{
+
+}
+
+.line {
+  margin-top: 30rpx;
+  background: #E0E3DA;
+  width: 105%;
+  height: 15rpx;
+}
+
+
+.comment-area{
+  margin: 30rpx 0 300rpx 0;
+}
+
+.comment{
+  height: auto;
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+
+.comment-detail{
+  display: inline-block;
+  margin: 0 0 0 40rpx;
+  width: 80%;
+  height: auto;
+}
+
+
+.comment-like{
+  display: inline-block;
+  margin: 0 0 0 50rpx;
+  text-align: center;
+}
+
+.comment-userNickname{
+  font-size: small;
+  font-weight: 600;
+}
+
+.comment-content{
+  margin-top: 20rpx;
+  word-break:break-all;
+}
+
+.comment-time{
+  color: #DDDDDD;
+  margin-top: 10rpx;
+  font-size: smaller;
+
+}
+
+.comment-image{
+  height: 30rpx;
+  width: 30rpx;
+}
+
+.comment-like-number{
+  color: #EEEEEE;
+}
+
+
+.bottom-fix{
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+}
+
+.bottom-input{
+  display:inline-block;
+  width: 500rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  background-color: #EEEEEE;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+
+.bottom-submit{
+  margin-left: 15rpx;
+  display:inline-block;
+  height: 50rpx;
+  width: 100rpx;
+  border-radius: 25rpx;
+  background-color: red;
+  color: white;
+  position: relative;
+  top: -30rpx;
+  text-align: center;
+}
+
+.bottom-like{
+  display:inline-block;
+
+}
+
+.like-image{
+  height: 60rpx;
+  width: 60rpx;
+  margin: 0 0 10rpx 10rpx;
+}

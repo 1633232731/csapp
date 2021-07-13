@@ -1,0 +1,28 @@
+<!--miniprogram/pages/mine/mine.wxml-->
+
+
+<view class="nickname">
+  <input class="nickname-input" placeholder="请输入昵称" bindinput="getInputNickname" value="{{inputNickname}}"
+    maxlength="12"></input>
+  <view class="nickname-submit" bindtap="checkSubmit">
+    提交
+  </view>
+</view>
+
+<view class="avatar">
+  <view class="avatar-hint">RGB纯色头像(0~255)</view>
+  <view class="avatar-input-area">
+    <input style="color:red" class="avatar-input-1" placeholder="R" type="number" bindinput="getRed" value="{{RGBAvatar[0]}}"></input>
+    <input style="color:green" class="avatar-input-2" placeholder="G" type="number" bindinput="getGreen" value="{{RGBAvatar[1]}}"></input>
+    <input style="color:blue" class="avatar-input-3" placeholder="B" type="number" bindinput="getBlue" value="{{RGBAvatar[2]}}"></input>
+    <view class="avatar-preview" style="background-color:RGB({{RGBAvatar[0]}},{{RGBAvatar[1]}},{{RGBAvatar[2]}})"></view>
+  </view>
+  <view class="avatar-preview-button" bindtap="previewAvatar">预览</view>
+  <view class="avatar-submit" bindtap="checkAvatar">提交</view>
+</view>
+
+
+<view class="mine">
+  <view class="mine-publish" bindtap="navigateToMyPublish">我的发布</view>
+  <view class="mine-like" bindtap="navigateToMyLike">我的收藏</view>
+</view>

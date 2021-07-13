@@ -1,0 +1,136 @@
+/* miniprogram/pages/mine/mine.wxss */
+
+page {
+  background:white;
+
+}
+
+
+.nickname{
+  margin: 10% 15% 0 15%;
+  width: 70%;
+  text-align: center;
+}
+
+.nickname-input{
+  width: 100%;
+  height: 100rpx;
+  padding: 5rpx 10rpx 5rpx 10rpx;
+  border-radius: 50rpx;
+  border:1px solid black;
+}
+
+.nickname-submit{
+  width: 80%;
+  margin-left: 10%;
+  height: 60rpx;
+  padding: 15rpx 10rpx 5rpx 10rpx;
+  border-radius: 30rpx;
+  background-color: RGB(0,102,255);
+  color:white;
+  margin-top: 20rpx;
+}
+
+
+.avatar{
+  margin: 10% 10% 0 10%;
+  width: 80%;
+  text-align: center;
+}
+
+.avatar-hint{
+
+}
+
+.avatar-input-area{
+  margin-top: 30rpx;
+
+}
+.avatar-input-1{
+  display: inline-block;
+  width: 120rpx;
+  height: 60rpx;
+  border: 1rpx solid black;
+  border-radius: 30rpx;
+  margin-right: 30rpx;
+}
+.avatar-input-2{
+  display: inline-block;
+  width: 120rpx;
+  height: 60rpx;
+  border: 1rpx solid black;
+  border-radius: 30rpx;
+}
+.avatar-input-3{
+  display: inline-block;
+  width: 120rpx;
+  height: 60rpx;
+  border: 1rpx solid black;
+  border-radius: 30rpx;
+  margin-left: 30rpx;
+}
+
+.avatar-preview{
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  margin-left: 30rpx;
+}
+
+.avatar-preview-button{
+  display: inline-block;
+  background-color: white;
+  color:RGB(0,102,255);
+  height: 60rpx;
+  width: 40%;
+  margin: 30rpx 1.25% 0 1.25%;
+  border-radius: 30rpx;
+  padding-top: 15rpx;
+  border: 1rpx solid black;
+}
+.avatar-submit{
+  /*margin: 30rpx 20rpx 0 20rpx;*/
+  display: inline-block;
+  background-color: RGB(0,102,255);
+  color:white;
+  height: 60rpx;
+  width: 40%;
+  margin: 30rpx 1.25% 0 1.25%;
+  border-radius: 30rpx;
+  padding-top: 15rpx;
+  border: 1rpx solid black;
+}
+
+
+.mine{
+  margin-top: 100rpx;
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.mine-publish{
+  display: inline-block;
+  width: 40%;
+  height: 60rpx;
+  background-color: RGB(0,102,255);
+  color: white;
+  border-radius: 30rpx;
+  margin-right: 10rpx;
+  padding-top: 20rpx;
+  border: 1rpx solid black;
+}
+
+.mine-like{
+  display: inline-block;
+  width: 40%;
+  height: 60rpx;
+  background-color: white;
+  color: RGB(0,102,255);
+  border-radius: 30rpx;
+  margin-left: 10rpx;
+  padding-top: 20rpx;
+  border: 1rpx solid black;
+
+}

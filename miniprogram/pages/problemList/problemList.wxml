@@ -1,0 +1,35 @@
+<!--miniprogram/pages/problemList/problemList.wxml-->
+<block wx:for="{{data}}">
+  <view class="data-block" bindtap="navigateToDetail" data-problemno="{{item.problemID}}">
+    <view class="data-top">
+      <block wx:if="{{index==0 || index==1 || index==2}}">
+        <view wx:if="{{index==0}}" class="data-top-number-area" style="background-color:RGB(254,75,89)">
+          <text class="data-top-number">{{index+1}}</text>
+        </view>
+        <view wx:if="{{index==1}}" class="data-top-number-area" style="background-color:RGB(255,177,75)">
+          <text class="data-top-number">{{index+1}}</text>
+        </view>
+        <view wx:if="{{index==2}}" class="data-top-number-area" style="background-color:RGB(72,144,254)">
+          <text class="data-top-number">{{index+1}}</text>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="data-top-number-area">
+          <text class="data-top-number">{{index+1}}</text>
+        </view>
+      </block>
+
+      <view class="data-top-title">{{item.title}}</view>
+    </view>
+
+    <view class="data-middle">
+      <view class="data-middle-text">{{item.description}}</view>
+    </view>
+
+    <view class="data-bottom">
+      <view class="data-bottm-author">{{item.authorNickname}}</view>
+      <view class="data-bottom-like">{{item.like}} 赞同</view>
+    </view>
+
+  </view>
+</block>
